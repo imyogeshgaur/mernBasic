@@ -40,8 +40,26 @@ router.get("/about", (req, res) => {
 router.get("/contact", (req, res) => {
   res.send("Hi from contact page");
 });
-router.get("/signin", (req, res) => {
-  res.send("Hi from login page");
+router.post("/signin", async(req, res) => {
+  
+  const {email,password} = req.body;
+
+  try {
+    if(!email||!password){
+      res.status(400).json({error:"Please fill all fields"});
+    }
+  
+    const dataOfUser = await User.findOne({email});
+  
+    if(dataOfUser == null){
+        res.status(400).json({error:"Invalid Credential"});
+    }else{
+      res.status(200).json({message:"User Login Sucessfully !!!"})
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
 });
 router.get("/signup", (req, res) => {
   res.send("Hi from registration page");
