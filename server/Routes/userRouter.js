@@ -23,13 +23,22 @@ router.post("/register", async (req, res) => {
     if (emailPromise) {
       return res.status(422).json({ error: "Email already Exist !!!" });
     }
+    if (password != cpassword) {
+      return res.status(422).json({ error: "Password Do not Match !!!" });
+    } else {
+      const newUser = new User({
+        name,
+        email,
+        phone,
+        work,
+        password,
+        cpassword,
+      });
+      await newUser.save();
+    }
   } catch (error) {
     console.log(error);
   }
-  
-  const newUser = new User({ name, email, phone, work, password, cpassword });
-
-  await newUser.save();
 
   res.status(201).send("Data Stored Sucessfully !!!");
 });
