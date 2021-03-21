@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs');
 
 const User = require("../Model/User");
 
@@ -49,26 +50,28 @@ router.get("/about", (req, res) => {
 router.get("/contact", (req, res) => {
   res.send("Hi from contact page");
 });
-router.post("/signin", async(req, res) => {
-  
-  const {email,password} = req.body;
+router.post("/signin", async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(422).json({ error: "Please Fill all the Fields !!!" });
+  }
 
   try {
-    if(!email||!password){
-      res.status(400).json({error:"Please fill all fields"});
-    }
-  
-    const dataOfUser = await User.findOne({email});
-  
-    if(dataOfUser == null){
-        res.status(400).json({error:"Invalid Credential"});
-    }else{
-      res.status(200).json({message:"User Login Sucessfully !!!"})
+    const userLogin = await User.findOne({ email });
+    if (userLogin) {
+      const isMatch = await bcrypt.compare(password, userLogin.password);
+      if (!isMatch) {
+        res.status(400).json({ error: "Invalid Credentials !!!" });
+      } else {
+        res.status(200).json({ message: "User Login Sucessfully !!!" });
+      }
+    } else {
+      res.status(400).json({ error: "Invalid Credentials !!!" });
     }
   } catch (error) {
     console.log(error);
   }
-
 });
 router.get("/signup", (req, res) => {
   res.send("Hi from registration page");
