@@ -50,6 +50,9 @@ router.get("/about", (req, res) => {
 router.get("/contact", (req, res) => {
   res.send("Hi from contact page");
 });
+router.get("/signin",async(req,res)=>{
+  res.send("Hi from Login Page");
+})
 router.post("/signin", async (req, res) => {
   const { email, password } = req.body;
 
@@ -63,7 +66,10 @@ router.post("/signin", async (req, res) => {
       const isMatch = await bcrypt.compare(password, userLogin.password);
 
       const token = await userLogin.generateAuthToken();
-      console.log(token);
+      res.cookie("jwtToken",token,{
+        expires:new Date(Date.now()+30000),
+        httpOnly:true
+      });
 
       if (!isMatch) {
         res.status(400).json({ error: "Invalid Credentials !!!" });
