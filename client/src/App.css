@@ -159,5 +159,15 @@
   background-color: blueviolet;
   color: white;
   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+}
 
+.card{
+  display: grid;
+  place-items: center;
+  margin-top: 3%;
+}
+
+.card-body{
+  background-color: rgb(204, 157, 248);
+  box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
 }
