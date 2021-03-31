@@ -101,3 +101,20 @@
   text-align: center;
   color: rgb(198, 255, 190);
 }
+
+.navbar-custom{
+  background-color: blueviolet;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link{
+  color: white;
+}
+
+.nav-link:focus{
+  color: black;
+}
+
+.navbar-brand:focus{
+  color: black;
+}
