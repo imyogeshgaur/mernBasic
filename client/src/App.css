@@ -103,7 +103,7 @@
 }
 
 .navbar-custom{
-  background-color: blueviolet;
+  background-image: linear-gradient(rgb(61, 245, 55),red,blue);
 }
 
 .navbar-custom .navbar-brand,
@@ -112,9 +112,9 @@
 }
 
 .nav-link:focus{
-  color: black;
+  color: yellow;
 }
 
 .navbar-brand:focus{
-  color: black;
+  color: yellow;
 }
