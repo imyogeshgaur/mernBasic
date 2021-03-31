@@ -10,19 +10,19 @@ const SignUp = () => {
                 <form action="/signup" method="POST">
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputEmail1">Name</label>
-                        <input type="text" className="form-control" id="name" name="name" autoComplete="off" />
+                        <input type="text" className="form-control" id="nameRegister" name="nameRegister" autoComplete="none" />
                     </div>
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputEmail1">Email</label>
-                        <input type="text" className="form-control" id="email" name="email" />
+                        <input type="text" className="form-control" id="emailRegister" name="emailRegister" autoComplete="none"/>
                     </div>
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputEmail1">Phone</label>
-                        <input type="text" className="form-control" id="phone" name="phone" />
+                        <input type="text" className="form-control" id="phoneRegister" name="phoneRegister" autoComplete="none"/>
                     </div>
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputEmail1">Work</label>
-                        <input type="text" className="form-control" id="work" name="work" />
+                        <input type="text" className="form-control" id="workRegister" name="workRegister" autoComplete="none"/>
                     </div>
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputPassword1">Password</label>

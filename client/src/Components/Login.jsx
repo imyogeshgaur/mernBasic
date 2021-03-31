@@ -10,7 +10,7 @@ const Login = () => {
                 <form action="/signup" method="POST">
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputEmail1">Email</label>
-                        <input type="text" className="form-control" id="email" name="email" />
+                        <input type="text" className="form-control" id="emailSignIn" name="emailSignIn" autoComplete="none" />
                     </div>
                     <div className="form-group">
                         <label className="labelRegister" for="exampleInputPassword1">Password</label>
