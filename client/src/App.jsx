@@ -32,7 +32,7 @@ const App = () => {
       <Route exact path="/signup">
         <SignUp/>
       </Route>
-
+      
     </>
   )
 }
