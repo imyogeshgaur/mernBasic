@@ -171,3 +171,64 @@
   background-color: rgb(204, 157, 248);
   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
 }
+
+/* ? Media Query */
+
+/* SmartPhone */
+@media (max-width:400px){
+  .containerFormRegister {
+   display: grid;
+   place-items: center;
+   background-color: rgb(190, 229, 255);
+   padding: 1rem;
+   margin: 3rem 0rem;
+   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+  } 
+  .containerFormLogin{
+   display: grid;
+   place-items: center;
+   background-color: rgb(255, 192, 190);
+   margin: 2rem 1rem;
+   padding: 1rem;
+   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+ }
+ .containerFormContact{
+   display: grid;
+   place-items: center;
+   background-color: rgb(198, 255, 190);
+   margin: 2rem 1rem;
+   padding: 1rem;
+   box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
+   }
+   .myPic{
+       width: 15rem;
+       height: 15rem;
+       border-radius: 50%;
+       display: flex;
+       margin-left: 4rem;
+       margin-top: 3rem;
+       border: 5px solid blueviolet;
+       box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
+   
+   }
+ .name{
+   display: flex;
+   align-items: center;
+   font-size: 2rem;
+   color: blueviolet;
+   margin-left: 7rem;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+ }
+.about{
+   margin-left: 1rem;
+   margin-right: 1rem;
+   margin-top: 2rem;
+   padding: 2rem 3rem;
+   border-radius: 1rem;
+   text-align: center;
+   background-color: blueviolet;
+   color: white;
+   box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
+ }
+}
