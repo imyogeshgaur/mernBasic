@@ -1,5 +1,4 @@
 import React from 'react'
-import "../App.css"
 import Profile from "../images/yogesh.jpg"
 
 const About = () => {
