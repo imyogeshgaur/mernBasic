@@ -1,23 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo{
+  color: white;
+  font-size: 18px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul{
+  float:right;
+  margin-right: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active ,a:hover{
+  background: #87cbff;
+  transition: .5s;
+}
+  
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width:952px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 50px 0px;
+    line-height: 30px;
+  }
+
+  nav ul li a{
+    font-size:20px;
+  }
+
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ul{
+    left: 0;
+  }
+  #close{
+    display: none;
+    line-height: 80px;
+  }
+  #bars{
+    line-height: 80px;
+  }
+}
+
 .containerFormRegister{
   display: grid;
   place-items: center;
-  background-color: rgb(190, 229, 255);
+  background-color: rgb(255, 219, 190);
   margin: 2rem 24rem;
   padding: 3rem;
   border-radius: 2rem;
   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
 }
-
-.containerFormLogin{
-  display: grid;
-  place-items: center;
-  background-color: rgb(255, 192, 190);
-  margin: 2rem 24rem;
-  padding: 3rem;
-  border-radius: 2rem;
-  box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
-}
-
+  
+  .containerFormLogin{
+      display: grid;
+      place-items: center;
+      background-color: rgb(255, 192, 190);
+      margin: 2rem 24rem;
+      padding: 3rem;
+      border-radius: 2rem;
+      box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+  }
+  
 .btnRegister{
   margin-top: 2rem;
   margin-left: 3rem;
@@ -30,10 +136,8 @@
 }
 
 .btnRegister:focus{
-  background-color:rgb(59, 174, 250);
+  background-color:rgb(238, 127, 0);
   color: white;
-  border: none;
-  outline: none;
 }
 
 .btnLogin{
@@ -50,27 +154,25 @@
 .btnLogin:focus{
   background-color:rgb(250, 65, 59);
   color: white;
-  border: none;
-  outline: none;
 }
-
-.form-control{
-  width: 25vw;
-  margin-left: 0rem;
-}
-
 .labelRegister{
   padding: 0rem 8rem;
+  color: black;
 }
 
 .headingRegister{
   text-align: center;
-  color: rgb(190, 229, 255);
+  color:rgb(255, 115, 0);
 }
 
 .headingLogin{
   text-align: center;
-  color: rgb(255, 192, 190);
+  color: red;
+}
+
+.headingContact{
+  text-align: center;
+  color: rgb(45, 141, 45);
 }
 
 .containerFormContact{
@@ -101,33 +203,6 @@
   outline: none;
 }
 
-.headingContact{
-  text-align: center;
-  color: rgb(198, 255, 190);
-}
-
-.navbar-custom{
-  background-color:blueviolet;
-}
-
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link{
-  color: white;
-}
-
-.nav-link:focus{
-  color: black;
-}
-
-.navbar-brand:focus{
-  color: black;
-}
-
-.form-control:focus{
-  box-shadow:none !important;
-  border-color:white  !important;
-}
-
 .myPic{
   width: 15rem;
   height: 15rem;
@@ -135,7 +210,7 @@
   display: flex;
   margin-left: 25rem;
   margin-top: 3rem;
-  border: 5px solid blueviolet;
+  border: 5px solid #0082e6;
   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
 
 }
@@ -144,7 +219,7 @@
   display: flex;
   align-items: center;
   font-size: 3rem;
-  color: blueviolet;
+  color: #0082e6;
   margin-left: 25rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -156,81 +231,103 @@
   padding: 2rem 3rem;
   border-radius: 1rem;
   text-align: center;
-  background-color: blueviolet;
+  background-color: #0082e6;
   color: white;
   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+
 }
 
-.card{
-  display: grid;
-  place-items: center;
-  margin-top: 3%;
+.form-control{
+  width: 25vw;
+  margin-left: 0rem;
 }
 
-.card-body{
-  background-color: rgb(204, 157, 248);
-  box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+.form-control:focus{
+  box-shadow:none !important;
+  border-color:white  !important;
+}
+
+.cardImg{
+height: 30vh;
+width: 24%;
+margin-left: 5rem;
+margin-top: 1rem;
+border-radius: 1rem;
+box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 }
 
 /* ? Media Query */
 
 /* SmartPhone */
+
 @media (max-width:400px){
-  .containerFormRegister {
-   display: grid;
-   place-items: center;
-   background-color: rgb(190, 229, 255);
-   padding: 1rem;
-   margin: 3rem 0rem;
-   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
-  } 
-  .containerFormLogin{
-   display: grid;
-   place-items: center;
-   background-color: rgb(255, 192, 190);
-   margin: 2rem 1rem;
-   padding: 1rem;
-   box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
- }
- .containerFormContact{
-   display: grid;
-   place-items: center;
-   background-color: rgb(198, 255, 190);
-   margin: 2rem 1rem;
-   padding: 1rem;
-   box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
-   }
-   .myPic{
-       width: 15rem;
-       height: 15rem;
-       border-radius: 50%;
-       display: flex;
-       margin-left: 4rem;
-       margin-top: 3rem;
-       border: 5px solid blueviolet;
-       box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
-   
-   }
- .name{
-   display: flex;
-   align-items: center;
-   font-size: 2rem;
-   color: blueviolet;
-   margin-left: 7rem;
-   margin-top: 3rem;
-   margin-bottom: 3rem;
- }
+ .containerFormRegister {
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 219, 190);
+  padding: 1rem;
+  margin: 3rem 0rem;
+  box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+ } 
+ .containerFormLogin{
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 192, 190);
+  margin: 2rem 1rem;
+  padding: 1rem;
+  box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
+}
+.containerFormContact{
+  display: grid;
+  place-items: center;
+  background-color: rgb(198, 255, 190);
+  margin: 2rem 1rem;
+  padding: 1rem;
+  box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
+  }
+  .myPic{
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      display: flex;
+      margin-left: 3rem;
+      margin-top: 3rem;
+      border: 5px solid #0082e6;
+      box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
+  
+  }
+.name{
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #0082e6;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .about{
-   margin-left: 1rem;
-   margin-right: 1rem;
-   margin-top: 2rem;
-   padding: 2rem 3rem;
-   border-radius: 1rem;
-   text-align: center;
-   background-color: blueviolet;
-   color: white;
-   box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
- }
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #0082e6;
+  color: white;
+  box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
+}
+.cardImg{
+  height: 30vh;
+  width: 61%;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+.labelRegister {
+  padding: 0rem 4rem;
+  color: black;
+}
 }
 
 /* Tablets */
@@ -239,7 +336,7 @@
   .containerFormRegister {
       display: grid;
       place-items: center;
-      background-color: rgb(190, 229, 255);
+      background-color: rgb(255, 219, 190);
       padding: 1rem;
       margin: 3rem 0rem;
       box-shadow: 0 2rem 1.5rem -1.7rem rgba(0, 0, 0, 0.8);
@@ -265,9 +362,9 @@
           height: 15rem;
           border-radius: 50%;
           display: flex;
-          margin-left: 4rem;
+          margin-left: 7rem;
           margin-top: 3rem;
-          border: 5px solid blueviolet;
+          border: 5px solid #0082e6;
           box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
       
       }
@@ -275,20 +372,59 @@
       display: flex;
       align-items: center;
       font-size: 2rem;
-      color: blueviolet;
-      margin-left: 7rem;
+      color: #0082e6;
+      margin-left: 8rem;
       margin-top: 3rem;
       margin-bottom: 3rem;
     }
   .about{
-      margin-left: -3rem;
+      margin-left: 2rem;
       margin-right: 3.5rem;
       margin-top: 2rem;
       padding: 2rem 3rem;
       border-radius: 1rem;
       text-align: center;
-      background-color: blueviolet;
+      background-color: #0082e6;
       color: white;
       box-shadow: 0 2rem 1.5rem -1.7rem rgb(0 0 0 / 80%);
     } 
+    .cardImg {
+      height: 30vh;
+      width: 70%;
+      margin-left: 5rem;
+      margin-top: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  }
+}
+
+.column {
+float: left;
+width: 25%;
+padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.cardProfile {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 16px;
+  text-align: center;
+  background-color: #e0a5fc;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+.column {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
 }
