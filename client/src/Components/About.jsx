@@ -1,13 +1,13 @@
 import React from 'react'
 import Profile from "../images/yogesh.jpg"
+import "../yogesh.css"
 
 const About = () => {
     return (
         <>
-            <div class="card container" style={{ width: "23rem" }}>
-                <img src={Profile} class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title text-center">About Me</h5>
+            <img src={Profile} class="cardImg" alt="..." />
+            <div class="column container">
+                <div class="cardProfile">
                     <form action="/signup" method="POST">
                         <div className="form-group">
                             <label className="labelRegister" for="name">Name</label>
