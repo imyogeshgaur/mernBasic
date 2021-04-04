@@ -7,6 +7,7 @@ import Contact from "./Components/Contact"
 import Login from "./Components/Login"
 import SignUp from "./Components/SignUp"
 import {Route} from "react-router-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const App = () => {
   return (
