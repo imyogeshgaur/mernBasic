@@ -1,6 +1,6 @@
 import React from 'react'
 import Profile from "../images/yogesh.jpg"
-import "../yogesh.css"
+
 
 const About = () => {
     return (
