@@ -154,6 +154,8 @@ a.active ,a:hover{
 .btnLogin:focus{
   background-color:rgb(250, 65, 59);
   color: white;
+  border: none;
+  outline: none;
 }
 .labelRegister{
   padding: 0rem 8rem;
