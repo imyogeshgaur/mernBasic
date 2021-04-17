@@ -33,7 +33,7 @@ const NavBar = () => {
              <li><NavLink style={{textDecoration:"none"}} to="/index">Home</NavLink></li>
              <li><NavLink style={{textDecoration:"none"}} to="/about">About</NavLink></li>
              <li><NavLink style={{textDecoration:"none"}} to="/contact">Contact</NavLink></li>
-             <li><NavLink style={{textDecoration:"none"}} to="/signin">Login</NavLink></li>
+             <li><NavLink style={{textDecoration:"none"}} to="/login">Login</NavLink></li>
              <li><NavLink style={{textDecoration:"none"}} to="/signup">Signup</NavLink></li>
            </ul>
          </nav>
